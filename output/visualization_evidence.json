@@ -1,0 +1,40 @@
+{
+  "critique": [
+    {
+      "category": "unsupported claim",
+      "problem": "The title says center-based rehab 'caused' better attendance, but the chart only shows four attendance percentages (77 to 82%) with no comparison group or test, so it cannot show cause and effect. The gaps are only 1 to 3 points, and a reader could be misled into believing the program is the reason.",
+      "repair": "Replace the title with a descriptive statement of what the data show, such as 'Attendance was similar across programs (77 to 82%)', with no causal wording."
+    },
+    {
+      "category": "truncated baseline",
+      "problem": "The y-axis starts at 76 and not 0, so the bar heights no longer match the values. The 77% home-based bar looks about a quarter the height of the 80% center-based bar, which exaggerates a 3-point gap and misleads readers about how big the difference is.",
+      "repair": "Start the y-axis at 0 (or show the full 0 to 100% range) so bar length is proportional to attendance."
+    },
+    {
+      "category": "missing unit",
+      "problem": "The y-axis has no label, so a reader cannot tell that the values are the percent of sessions attended, and the numbers 76 to 83 could be read as counts or scores.",
+      "repair": "Add the axis title 'Sessions attended (%)' so the unit and the measure are clear."
+    },
+    {
+      "category": "color-only encoding",
+      "problem": "The programs are told apart mainly by red versus green, which many color-blind readers cannot distinguish, and both bars use the same crosshatch pattern. In grayscale or a black-and-white printout, the two programs look nearly identical.",
+      "repair": "Use a color-blind-safe palette with clearly different lightness, and add direct labels or a second cue (such as a different position or label) so the programs can be told apart without color."
+    },
+    {
+      "category": "distracting decoration",
+      "problem": "The thick black bar edges, crosshatch fill, and heavy dark grid lines carry no data. They add visual noise that pulls attention away from the bar heights and makes the values harder to read.",
+      "repair": "Use plain solid fills with no hatching or outlines, and make the grid lines light and thin (or remove them) so the bars are the focus."
+    }
+  ],
+  "question": "At each follow-up visit, what share of patients in the Home-based and Center-based programs met their goals, and how do the two programs compare?",
+  "audience": "The rehabilitation program coordinator, who will use the chart to see whether either program needs more support at particular follow-up visits.",
+  "intended_claim": "The percent of patients meeting their goals rose at every follow-up visit in both programs, and it rose faster in the Center-based program (from 57% to 79%) than in the Home-based program (from 58% to 70%).",
+  "y_measure": "Percent of patients who met their goals (%)",
+  "grain": "One row is one program at one follow-up visit (for example, Home-based at visit 1), and one point on a line is the percent of that program's patients who met their goals at that visit.",
+  "data_types": {
+    "program": "categorical",
+    "visit_number": "ordinal",
+    "goal_met_pct": "quantitative"
+  },
+  "text_alternative": "This line chart shows the percentage of patients meeting the exercise goal across four follow-up visits for the Home-based and Center-based programs. Both programs start at nearly the same percentage during visit 1, with 58% of Home-based patients and 57% of Center-based patients meeting the goal. The percentages increase at each visit for both groups. By visit 4, the Home-based group reaches 70%, while the Center-based group reaches 79%. This represents a 12-percentage-point increase for the Home-based group and a 22-point increase for the Center-based group. At the final visit, the Center-based group is 9 percentage points higher. However, these results do not necessarily mean that the Center-based program is more effective. Patients chose which program they wanted to participate in, so other factors may have influenced the results. Also, each percentage is based on only about 45 patients per group at each visit, so the difference could be due to chance or differences in which patients returned for follow-up."
+}
